@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block HOME %}
+    <div class="container border-top mt-4">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">All Users</legend>
+
+
+                <div class="card">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">user id</th>
+                                <th scope="col">username</th>
+                                <th scope="col">station</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in table%}
+                            <tr>
+                                <th scope='row'>{{ user.user_id}}</th>
+                                <td>{{ user.username}}</td>
+                                <td>{{ user.address_station}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+            </fieldset>
+
+            <span class="form-group">
+                    <a href="/" class="btn btn-outline-info">Home</a>
+            </span>
+    </div>
+
+{% endblock HOME %}

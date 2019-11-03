@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block HOME %}
+    <div class="container border-top mt-4">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">All Deliveries</legend>
+
+
+                <div class="card">
+                        <table class="table table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">delivery id</th>
+                                    <th scope="col">sender ID</th>
+                                    <th scope="col">Start</th>
+
+                                    <th scope="col">receiver ID</th>
+                                    <th scope="col">End</th>
+                                    <th scope="col">weight(in kg)</th>
+                                    <th scope="col">Total Price(Rs)</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for deliver in table%}
+                                <tr>
+                                    <th scope='row'>{{ deliver.deli_id}}</th>
+                                    <td>{{ deliver.sender_id}}</td>
+                                    <td>{{ deliver.start_station}}</td>
+                                    <td>{{ deliver.receiver_id}}</td>
+                                    <td>{{ deliver.end_station}}</td>
+                                    <td>{{ deliver.weight}} </td>
+                                    <td>{{ deliver.price}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+                    </div>
+
+            </fieldset>
+
+            <span class="form-group">
+                    <a href="/" class="btn btn-outline-info">Home</a>
+            </span>
+
+    </div>
+
+{% endblock HOME %}

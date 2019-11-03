@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block HOME %}
+    <div class="container">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">New Delivery</legend>
+                <div class="form-group">
+                    {{ form.sender_id.label(class="form-control-label") }}
+
+                    {% if form.sender_id.errors %}
+                        {{ form.sender_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.sender_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.sender_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                        {{ form.receiver_id.label(class="form-control-label") }}
+
+                        {% if form.receiver_id.errors %}
+                            {{ form.receiver_id(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.receiver_id.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.receiver_id(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.weight.label(class="form-control-label") }}
+                    {% if form.weight.errors %}
+                        {{ form.weight(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.weight.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.weight(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                
+
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+
+                    <a href="/" class="btn btn-outline-info">Home</a>
+
+        </form>
+    </div>
+
+{% endblock HOME %}
