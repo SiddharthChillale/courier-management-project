@@ -1,0 +1,18 @@
+
+
+{% extends 'layout.html' %}
+{% block HOME %}
+<div class='container border mt-4'>
+        <h1 class='mb-3'>Courier Management System</h1>
+        <nav class="">
+            <!-- {{ address[0], address[1] }} -->
+            <li class="nav-item"><a href= {{address[0] }}>Enter new User</a></li>
+            <li class="nav-item"><a href= {{address[1] }}>Enter new Delivery</a></li>
+            <li class="nav-item"><a href= {{address[2] }}>View All Deliveries</a></li>
+            <li class="nav-item"><a href= {{address[3] }}>View all Users</a></li>
+            <li class="nav-item"><a href= {{address[4] }}>Delete User</a></li>
+            <li class="nav-item"><a href= {{address[5] }}>Delete Delivery</a></li>
+        </nav>
+
+</div>
+{% endblock HOME %}
