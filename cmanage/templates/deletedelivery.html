@@ -4,9 +4,9 @@
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Delete Delivery</legend>
+            <legend class="border-bottom mb-4 text-center text-white"><h1>Delete Delivery</h1></legend>
             <div class="form-group">
-                {{ form.Del_id.label(class="form-control-label") }}
+                <h4>{{ form.Del_id.label(class="form-control-label") }}</h4>
 
                 {% if form.Del_id.errors %}
                     {{ form.Del_id(class="form-control form-control-lg is-invalid") }}
@@ -16,17 +16,17 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.Del_id(class="form-control form-control-lg") }}
+                    {{ form.Del_id(class="form-control form-control-lg", placeholder="Enter delivery Id to delete") }}
                 {% endif %}
             </div>
 
 
         </fieldset>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
+        <div class="form-group text-center">
+            {{ form.submit(class="btn btn-outline-dark btn-lg shadow-sm") }}
         </div>
 
-            <a href="/" class="btn btn-outline-info">Home</a>
+            <div class="text-center"><a href="/" class="btn btn-outline-dark btn-lg shadow-sm">Home</a></div    >
 
     </form>
 </div>

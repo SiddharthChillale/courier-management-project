@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block HOME %}
-<div class="container">
+<div class="container text-white">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Delete User</legend>
+            <legend class="border-bottom mb-4 text-center text-white"><h1>Delete User</h1></legend>
             <div class="form-group">
-                {{ form.object_id.label(class="form-control-label") }}
+                <h4>{{ form.object_id.label(class="form-control-label") }}</h4>
 
                 {% if form.object_id.errors %}
                     {{ form.object_id(class="form-control form-control-lg is-invalid") }}
@@ -16,17 +16,17 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.object_id(class="form-control form-control-lg") }}
+                    {{ form.object_id(class="form-control form-control-lg", placeholder="Enter user Id to delete") }}
                 {% endif %}
             </div>
 
 
         </fieldset>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
+        <div class="form-group text-center">
+            {{ form.submit(class="btn btn-outline-dark") }}
         </div>
 
-            <a href="/" id="home" class="btn btn-outline-info">Home</a>
+            <div class="text-center"><a href="/" id="home" class="btn btn-outline-dark">Home</a></div>
 
     </form>
 </div>

@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block HOME %}
-    <div class="container">
+    <div class="container text-white">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group ">
-                <legend class="border-bottom mb-4">New User Login</legend>
+                <legend class="border-bottom mb-4 text-white text-center"><h1>New User Login</h1></legend>
                 <div class="form-group">
-                    {{ form.username.label(class="form-control-label") }}
+                    <h4 class = "text-white">{{ form.username.label(class="form-control-label") }}</h4>
 
                     {% if form.username.errors %}
                         {{ form.username(class="form-control form-control-lg is-invalid") }}
@@ -20,7 +20,7 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    {{ form.lane.label(class="form-control-label") }}
+                    <h4 class = "text-white">{{ form.lane.label(class="form-control-label") }}</h4>
                     {% if form.lane.errors %}
                         {{ form.lane(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -33,7 +33,7 @@
                     {% endif %}
                 </div>
                 <div class=" dropdown">
-                    {{ form.station.label(class="form-control-label") }}
+                    <h4>{{ form.station.label(class="form-control-label") }}</h4>
                     {% if form.station.errors %}
                         {{ form.station(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -47,12 +47,12 @@
                 </div>
 
             </fieldset>
-            <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+            <div class="form-group text-center">
+                {{ form.submit(class="btn btn-outline-dark btn-lg shadow-sm") }}
+            </div></br></br>
+            <div class="text-center text-white">
+                <a href="/" class="btn btn-outline-dark btn-lg shadow-sm">Home</a>
             </div>
-
-                <a href="/" class="btn btn-outline-info">Home</a>
-
         </form>
     </div>
 

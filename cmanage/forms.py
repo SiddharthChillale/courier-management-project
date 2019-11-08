@@ -78,7 +78,7 @@ class DeliveryForm(FlaskForm):
 # deletion forms
 
 class UserDeletionForm(FlaskForm):
-    object_id = IntegerField('Object_ID', validators=[DataRequired()])
+    object_id = IntegerField('User ID', validators=[DataRequired()])
     submit = SubmitField('Confirm Delete')
 
     def validate_object_id(self, object_id):
@@ -86,7 +86,7 @@ class UserDeletionForm(FlaskForm):
             raise ValidationError("No Delivery of This ID. Please check again.")
 
 class DeliveryDeletionForm(FlaskForm):
-    Del_id = IntegerField('Delivery_ID', validators=[DataRequired()])
+    Del_id = IntegerField('Delivery ID', validators=[DataRequired()])
     submit = SubmitField('Confirm Delete')
 
     def validate_Del_id(self, Del_id):

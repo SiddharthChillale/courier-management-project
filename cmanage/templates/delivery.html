@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block HOME %}
-    <div class="container">
+    <div class="container text-white">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">New Delivery</legend>
+                <legend class="border-bottom mb-4 text-white text-center"><h1>New Delivery</h1></legend>
                 <div class="form-group">
-                    {{ form.sender_id.label(class="form-control-label") }}
+                    <h4>{{ form.sender_id.label(class="form-control-label") }}</h4>
 
                     {% if form.sender_id.errors %}
                         {{ form.sender_id(class="form-control form-control-lg is-invalid") }}
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="form-group">
-                        {{ form.receiver_id.label(class="form-control-label") }}
+                        <h4>{{ form.receiver_id.label(class="form-control-label") }}</h4>
 
                         {% if form.receiver_id.errors %}
                             {{ form.receiver_id(class="form-control form-control-lg is-invalid") }}
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group">
-                    {{ form.weight.label(class="form-control-label") }}
+                    <h4>{{ form.weight.label(class="form-control-label") }}</h4>
                     {% if form.weight.errors %}
                         {{ form.weight(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -52,12 +52,11 @@
 
 
             </fieldset>
-            <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+            <div class="form-group text-center">
+                {{ form.submit(class="btn btn-outline-dark btn-lg shadow-sm") }}
             </div>
 
-                    <a href="/" class="btn btn-outline-info">Home</a>
-
+                  <div class="text-center text-white">  <a href="/" class="btn btn-outline-dark btn-lg shadow-sm">Home</a></div>
         </form>
     </div>
 
