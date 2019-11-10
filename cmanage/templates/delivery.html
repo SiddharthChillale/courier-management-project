@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% block HOME %}
     <div class="container text-white">
+    <div class="row">
+        <div class="col-sm-6 ">
+            Image here !! 
+        </div>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -53,11 +57,12 @@
 
             </fieldset>
             <div class="form-group text-center">
-                {{ form.submit(class="btn btn-outline-dark btn-lg shadow-sm") }}
+                {{ form.submit(class="btn text-white btn-outline-success btn-lg shadow-sm") }}
             </div>
 
-                  <div class="text-center text-white">  <a href="/" class="btn btn-outline-dark btn-lg shadow-sm">Home</a></div>
+                  <!-- <div class="text-center ">  <a href="/" class="btn text-white btn-outline-dark btn-lg shadow-sm">Home</a></div> -->
         </form>
+        </div>
     </div>
 
 {% endblock HOME %}

@@ -16,17 +16,17 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.object_id(class="form-control form-control-lg", placeholder="Enter user Id to delete") }}
+                    {{ form.object_id(class="form-control text-white form-control-lg", placeholder="Enter user Id to delete") }}
                 {% endif %}
             </div>
 
 
         </fieldset>
         <div class="form-group text-center">
-            {{ form.submit(class="btn btn-outline-dark") }}
+            {{ form.submit(class="btn btn-outline-danger") }}
         </div>
 
-            <div class="text-center"><a href="/" id="home" class="btn btn-outline-dark">Home</a></div>
+            <!-- <div class="text-center"><a href="/" id="home" class="text-white btn btn-outline-dark">Home</a></div> -->
 
     </form>
 </div>

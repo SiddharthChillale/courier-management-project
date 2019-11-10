@@ -1,59 +1,67 @@
 {% extends "layout.html" %}
 {% block HOME %}
-    <div class="container text-white">
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <fieldset class="form-group ">
-                <legend class="border-bottom mb-4 text-white text-center"><h1>New User Login</h1></legend>
-                <div class="form-group">
-                    <h4 class = "text-white">{{ form.username.label(class="form-control-label") }}</h4>
-
-                    {% if form.username.errors %}
-                        {{ form.username(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.username.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
+    <div class="container text-white put-up">
+        <div class="row">
+        <div class="col-sm-6 ">
+            Image here !! 
+        </div>
+        
+            <form method="POST" action="" class="col-sm-6">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group ">
+                        <legend class="border-bottom mb-4 text-white text-center"><h1>New User Login</h1></legend>
+                        <div class="form-group">
+                            <div class = "text-white ">{{ form.username.label(class="form-control-label") }}</div>
+        
+                            {% if form.username.errors %}
+                                {{ form.username(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.username.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.username(class="form-control form-control-lg") }}
+                            {% endif %}
                         </div>
-                    {% else %}
-                        {{ form.username(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    <h4 class = "text-white">{{ form.lane.label(class="form-control-label") }}</h4>
-                    {% if form.lane.errors %}
-                        {{ form.lane(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.lane.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
+                        <div class="form-group">
+                            <div class = "text-white">{{ form.lane.label(class="form-control-label") }}</div>
+                            {% if form.lane.errors %}
+                                {{ form.lane(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.lane.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.lane(class="form-control form-control-lg") }}
+                            {% endif %}
                         </div>
-                    {% else %}
-                        {{ form.lane(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class=" dropdown">
-                    <h4>{{ form.station.label(class="form-control-label") }}</h4>
-                    {% if form.station.errors %}
-                        {{ form.station(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.station.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
+                        <div class="dropdown">
+                            <div>{{ form.station.label(class="form-control-label") }}</div>
+                            {% if form.station.errors %}
+                                {{ form.station(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.station.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.station(class="form-control form-control-lg") }}
+                            {% endif %}
                         </div>
-                    {% else %}
-                        {{ form.station(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-
-            </fieldset>
-            <div class="form-group text-center">
-                {{ form.submit(class="btn btn-outline-dark btn-lg shadow-sm") }}
-            </div></br></br>
-            <div class="text-center text-white">
-                <a href="/" class="btn btn-outline-dark btn-lg shadow-sm">Home</a>
-            </div>
-        </form>
+        
+                    </fieldset>
+                    <br/>
+                    <div class="form-group text-center">
+                        {{ form.submit(class="btn text-white btn-outline-success btn-block shadow-sm") }}
+                    </div></br></br>
+                    <!-- <div class="text-center ">
+                        <a href="/" class="btn btn-outline-light text-white btn-lg shadow-sm">Home</a>
+                    </div> -->
+                </form>
+                
+        </div>
     </div>
 
 {% endblock HOME %}
