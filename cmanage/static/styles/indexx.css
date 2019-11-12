@@ -7,7 +7,6 @@
 
 
 .font-change{
-    /* font-family: 'Indie Flower', cursive; */
     font-family: 'Roboto Mono', monospace;
 
 }
@@ -64,6 +63,7 @@
     background-position: 0 bottom;
     transform-origin: center bottom;
     z-index: -200;
+    /* background-color: red; */
 }
 .waveTop {
     background-size: 50% 100px;

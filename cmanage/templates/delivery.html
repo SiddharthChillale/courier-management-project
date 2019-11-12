@@ -2,10 +2,11 @@
 {% block HOME %}
     <div class="container text-white">
     <div class="row">
-        <div class="col-sm-6 ">
-            Image here !! 
+        <div class="col-sm-6 overflow-hidden">
+            <img class="img-fluid" src="{{ url_for('static',filename='images/deliverytruck.jpg') }}">
+ 
         </div>
-        <form method="POST" action="">
+        <form method="POST" action="" class="ml-4">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4 text-white text-center"><h1>New Delivery</h1></legend>
